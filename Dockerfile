@@ -1,5 +1,5 @@
 FROM openjdk
-ADD usr/HelloWorld-0.0.1-SNAPSHOT.jar /usr
-WORKDIR /usr
+WORKDIR /tmp
+ADD target/HelloWorld-0.0.1-SNAPSHOT.jar /tmp
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "HelloWorld-0.0.1-SNAPSHOT.jar"]
